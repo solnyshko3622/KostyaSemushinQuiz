@@ -1,6 +1,6 @@
 // Установка названия викторины и автора
-// document.getElementById('quiz-title').textContent = 'Моя викторина';
-// document.getElementById('quiz-author').textContent = 'Автор: Ваше имя';
+document.getElementById('quiz-title').textContent = 'Моя викторина';
+document.getElementById('quiz-author').textContent = 'Автор: Ваше имя';
 
 // Правильные ответы (замените на свои)
 const correctAnswers = {
@@ -20,24 +20,24 @@ const correctAnswers = {
 document.getElementById('submit-btn').addEventListener('click', function() {
     let score = 0;
     const totalQuestions = 10;
-    
+
     // Проверка каждого вопроса
     for (let i = 1; i <= totalQuestions; i++) {
         const questionName = 'q' + i;
-        const selectedOption = document.querySelector(input[name="${questionName}"]:checked);
-        
+        const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+
         if (selectedOption) {
             if (selectedOption.value === correctAnswers[questionName]) {
                 score++;
             }
         }
     }
-    
+
     // Показ результата
     const resultElement = document.getElementById('result');
-    resultElement.textContent = Ваш результат: ${score} из ${totalQuestions};
+    resultElement.textContent = `Ваш результат: ${score} из ${totalQuestions}`;
     resultElement.style.display = 'block';
-    
+
     // Прокрутка к результату
     resultElement.scrollIntoView({ behavior: 'smooth' });
 });
