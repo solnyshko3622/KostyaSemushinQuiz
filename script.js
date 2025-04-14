@@ -1,7 +1,3 @@
-// Установка названия викторины и автора
-document.getElementById('quiz-title').textContent = 'Моя викторина';
-document.getElementById('quiz-author').textContent = 'Автор: Ваше имя';
-
 // Правильные ответы (замените на свои)
 const correctAnswers = {
     q1: 'a',
